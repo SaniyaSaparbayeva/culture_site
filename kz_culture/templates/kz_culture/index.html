@@ -1,0 +1,22 @@
+{% extends 'kz_culture/base.html'%}
+{% block title%}
+Home Page
+{% endblock %}
+{% block content%}
+    <h1>EXPLORE KAZAKHSTAN WITH US!</h1>
+<div class="about-post">
+    {% for el in about %}
+    <br>
+        <div class="c1">
+            <h2 style="margin-left:10px;">{{ el.title }}</h2>
+            <p> {{ el.content }}</p>
+            <img src="{{ el.photo.url }}"/>
+            <br>
+        </div>
+
+
+
+    {% endfor %}
+</div>
+{% endblock %}
+

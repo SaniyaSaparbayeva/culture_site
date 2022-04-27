@@ -1,0 +1,21 @@
+{% extends 'kz_culture/base.html'%}
+{% block title%}
+Traditions
+{% endblock %}
+
+{% block content%}
+
+
+            {% for el in traditions %}
+
+                <div class="c1">
+                    <h2 style="margin-left:10px;">{{ el.title }}</h2>
+                    <p> {{ el.content }}</p>
+                    <img src="{{ el.photo.url }}"/>
+                </div>
+
+
+
+            {% endfor %}
+
+{% endblock %}

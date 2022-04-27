@@ -1,0 +1,17 @@
+{% extends 'kz_culture/base.html'%}
+{% block title%}
+Registration
+{% endblock %}
+
+{% block content%}
+<h3>WELCOME TO REGISTRATION</h3>
+<br>
+<div class="form-fields">
+<form action="{% url 'registration' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+{% endblock %}

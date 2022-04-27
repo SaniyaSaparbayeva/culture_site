@@ -1,0 +1,18 @@
+{% extends 'kz_culture/base.html'%}
+{% block title%}
+AddPost
+{% endblock %}
+
+{% block content%}
+<h3>Here you can add posts.</h3>
+<br>
+<div class="form-fields">
+<form action="{% url 'addPost' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <button type="submit">Submit</button>
+    
+</form>
+</div>
+{% endblock %}
